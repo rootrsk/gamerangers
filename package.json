@@ -37,5 +37,5 @@
     ]
   },
   
-  "proxy": "https://rootrsk-gamerangers-api.herokuapp.com/"
+  "proxy": "https://rootrsk-gamerangers-api.herokuapp.com"
 }
