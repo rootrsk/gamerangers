@@ -1,0 +1,41 @@
+.profile{
+    margin: auto;
+    background: white;
+    color: black;
+    width: 80%;
+    height: 200px;
+    border-radius: 5px;
+    
+}
+.profile h2{
+    text-align: center;
+}
+.profile__details{
+    display: flex;
+    justify-content: center;
+}
+.user-profile{
+    width: 100%;
+}
+.center-button-div{
+    width: 150px;
+    height: 130px;
+    margin: auto;
+}
+.center-button{
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.display-profile{
+    background:  #00394d;
+    padding : 5px;
+    margin-top: 10px;
+}
+.display-profile__details{
+    display: flex;
+    height: 50px;
+}
