@@ -20,10 +20,9 @@ class UpComingMatches extends React.Component{
     render() {
         return(
             <div className='slider'>
-                {/* <h3>Upcoming Mathches</h3> */}
-                {this.state.matches.map((match,index)=>{
+                {this.state.matches.length>0?this.state.matches.map((match,index)=>{
                     return <RenderMatch match={match} index={index} key={match._id}/>
-                })}
+                }):<p></p>}
             </div>
         )
     }
