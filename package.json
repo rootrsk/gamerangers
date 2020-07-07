@@ -2,7 +2,6 @@
   "name": "gamerangers",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
   "engines": {
     "npm": "6.12.1",
     "node": "12.13.1"
@@ -40,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxies": {
+    "/api/": {
+      "origin": "https://rootrsk-gamerangers-api.herokuapp.com"
+    }
   }
 }
