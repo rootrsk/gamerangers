@@ -22,7 +22,7 @@ class UpComingMatches extends React.Component{
             <div className='slider'>
                 {this.state.matches.length>0?this.state.matches.map((match,index)=>{
                     return <RenderMatch match={match} index={index} key={match._id}/>
-                }):<p></p>}
+                }):<p>No match found</p>}
             </div>
         )
     }
@@ -78,15 +78,15 @@ const RenderMatch = (props) =>{
     )
 }
 
-const Register = (props) =>{
-    console.log(props)
-    console.log('Going to reg page')
-    return <div>
-        <Link to='/'/>
-    </div>
-}
-Register()
+// const Register = (props) =>{
+//     console.log(props)
+//     console.log('Going to reg page')
+//     return <div>
+//         <Link to='/'/>
+//     </div>
+// }
+// Register()
 
-connect () (Register)
+// connect () (Register)
 
 export default UpComingMatches
