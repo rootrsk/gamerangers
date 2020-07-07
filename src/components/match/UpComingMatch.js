@@ -8,10 +8,11 @@ class UpComingMatches extends React.Component{
     state={matches : []}
     componentDidMount = async () =>{
         const response = await axios({
-            url:'/api/matches',
+            url:'/matches',
             method:'get'
         })
-        if(response.statusText==='OK'){
+        console.log(response.data.length)
+        if(response.data.length>0){
             this.setState({matches:response.data})
             console.log(this.state)
         }
