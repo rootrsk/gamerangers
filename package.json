@@ -2,6 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://rootrsk-gamerangers-api.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -35,7 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  
-  "proxy": "https://rootrsk-gamerangers-api.herokuapp.com"
+  }
 }
