@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gamerangers/static/css/main.87843395.chunk.css",
+    "main.js": "/gamerangers/static/js/main.fc381047.chunk.js",
+    "main.js.map": "/gamerangers/static/js/main.fc381047.chunk.js.map",
+    "runtime-main.js": "/gamerangers/static/js/runtime-main.6bc4a064.js",
+    "runtime-main.js.map": "/gamerangers/static/js/runtime-main.6bc4a064.js.map",
+    "static/js/2.85c88fb6.chunk.js": "/gamerangers/static/js/2.85c88fb6.chunk.js",
+    "static/js/2.85c88fb6.chunk.js.map": "/gamerangers/static/js/2.85c88fb6.chunk.js.map",
+    "index.html": "/gamerangers/index.html",
+    "precache-manifest.fd61255029ff62126f1cf4edd1161ba1.js": "/gamerangers/precache-manifest.fd61255029ff62126f1cf4edd1161ba1.js",
+    "service-worker.js": "/gamerangers/service-worker.js",
+    "static/css/main.87843395.chunk.css.map": "/gamerangers/static/css/main.87843395.chunk.css.map",
+    "static/js/2.85c88fb6.chunk.js.LICENSE.txt": "/gamerangers/static/js/2.85c88fb6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6bc4a064.js",
+    "static/js/2.85c88fb6.chunk.js",
+    "static/css/main.87843395.chunk.css",
+    "static/js/main.fc381047.chunk.js"
+  ]
+}
