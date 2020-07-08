@@ -8,7 +8,7 @@ class MatchRegistration extends React.Component{
     post = async({data}) =>{
         console.log(data)
         const response = await axios({
-            url:'/user/matchRegistation',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/user/matchRegistation',
             method:'POST',
             data : data
         })

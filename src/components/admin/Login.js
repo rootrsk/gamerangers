@@ -17,7 +17,7 @@ class Login extends React.Component{
             password: this.state.password
         }
         const response =  await axios({
-            url:'/admin/login',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/admin/login',
             method : 'POST',
             data
         })

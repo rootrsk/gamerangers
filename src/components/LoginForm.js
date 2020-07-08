@@ -27,7 +27,7 @@ class LoginFrom extends React.Component{
         this.setState({login_error:''})
         this.setState({button:'clicked'})
         const response = await axios({
-            url:'/user/login',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/user/login',
             method:'post',
             data: this.state
         })

@@ -17,7 +17,7 @@ import axios from 'axios'
 class User extends React.Component  {
     componentDidMount = async() =>{
         const response = await axios({
-            url:'/user/me',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/user/me',
             method:'get'
         })
         this.props.dispatch({
@@ -27,7 +27,7 @@ class User extends React.Component  {
     }
     componentDidUpdate =  async() =>{
         const response = await axios({
-            url:'/user/me',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/user/me',
             method:'get'
         })
         if(response.data.authentication==='loggedout'){

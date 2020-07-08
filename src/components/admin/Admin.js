@@ -21,7 +21,7 @@ import { connect } from 'react-redux'
 class Admin extends React.Component{
     componentDidMount = async() =>{
         const response = await axios({
-            url:'/admin/me',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/admin/me',
             method:'get'
         })
         this.props.dispatch({
@@ -32,7 +32,7 @@ class Admin extends React.Component{
 
     componentDidUpdate =  async() =>{
         const response = await axios({
-            url:'/admin/me',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/admin/me',
             method:'get'
         })
         if(response.data.authentication==='loggedout'){

@@ -15,7 +15,7 @@ class CreateMatch extends React.Component{
 const post = async(props) =>{
 
     const response = await axios({
-        url:'/match/create',
+        url:'https://rootrsk-gamerangers-api.herokuapp.com/match/create',
         method:'post',
         data:props
     })

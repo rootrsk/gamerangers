@@ -8,7 +8,7 @@ class Profile extends React.Component{
     componentDidMount = async() =>{
         console.log("hello")
         const response =await axios({
-            url :'/admin/me',
+            url :'https://rootrsk-gamerangers-api.herokuapp.com/admin/me',
             method:'get'
         })
         console.log(response)

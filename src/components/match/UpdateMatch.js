@@ -9,7 +9,7 @@ class UpdateMatch extends React.Component{
     componentDidMount = async(props) =>{
         if(this.props.match.params.id){
             const response = await axios({
-                url:`/admin/match/${this.props.match.params.id}`,
+                url:`https://rootrsk-gamerangers-api.herokuapp.com/admin/match/${this.props.match.params.id}`,
                 method:'get'
             })
             this.setState({})
@@ -51,7 +51,7 @@ class UpdateMatch extends React.Component{
 
     postHandler  = async (id) =>{
         const response = await axios({
-            url:`/admin/match/${id}`,
+            url:`https://rootrsk-gamerangers-api.herokuapp.com/admin/match/${id}`,
             method:'PATCH',
             data: this.state
         })

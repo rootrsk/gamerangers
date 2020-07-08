@@ -7,7 +7,7 @@ class UpcomingMatches extends React.Component{
     state ={matches:[]}
     componentDidMount =async()=>{
         const response = await axios({
-            url : '/user/matches',
+            url : 'https://rootrsk-gamerangers-api.herokuapp.com/user/matches',
             method : 'get'
         })
         this.setState({matches:response.data})

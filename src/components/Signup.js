@@ -7,7 +7,7 @@ var resData = ''
 const formValidation =async (data)=>{
     
     const response =await axios({
-        url : '/user/signup',
+        url : 'https://rootrsk-gamerangers-api.herokuapp.com/user/signup',
         method:'POST',
         data:data
     })

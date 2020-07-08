@@ -14,7 +14,7 @@ class ProfileEdit extends React.Component{
     state = {}
     componentDidMount = async() =>{
         const response = await axios({
-            url:'/user/me',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/user/me',
             method:'get',
         })
         this.setState({
@@ -65,7 +65,7 @@ class ProfileEdit extends React.Component{
         }
         console.log(this.state)
         const response = await axios({
-            url:'/user/profile',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/user/profile',
             method:'patch',
             data:data
         })

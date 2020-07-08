@@ -5,7 +5,7 @@ class SquadForm extends React.Component{
     componentDidMount = async() =>{
         const response = await Axios({
             method:'get',
-            url:'/user/me'
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/user/me'
         })
         console.table(this.props.params)
         if(response.data.user){

@@ -7,7 +7,7 @@ class Teams extends React.Component{
     state={matches : [],teams:[]}
     componentDidMount = async () =>{
         const response = await axios({
-            url:`/admin/match/teams/${this.props.match.params.id}`,
+            url:`https://rootrsk-gamerangers-api.herokuapp.com/admin/match/teams/${this.props.match.params.id}`,
             method:'get'
         })
         this.setState({teams:response.data.teams,match:response.data.match})
