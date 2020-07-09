@@ -8,7 +8,8 @@ class UpcomingMatches extends React.Component{
     componentDidMount =async()=>{
         const response = await axios({
             url : 'https://rootrsk-gamerangers-api.herokuapp.com/user/matches',
-            method : 'get'
+            method : 'get',
+            withCredentials: true
         })
         this.setState({matches:response.data})
     }

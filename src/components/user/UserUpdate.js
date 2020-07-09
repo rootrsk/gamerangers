@@ -16,6 +16,8 @@ class ProfileEdit extends React.Component{
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/user/me',
             method:'get',
+            withCredentials: true
+            
         })
         this.setState({
             response
@@ -67,7 +69,8 @@ class ProfileEdit extends React.Component{
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/user/profile',
             method:'patch',
-            data:data
+            data:data,
+            withCredentials: true
         })
         console.log(response)
         await this.setState({

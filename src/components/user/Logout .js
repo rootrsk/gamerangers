@@ -9,7 +9,8 @@ class Logout extends React.Component{
         console.log(document.cookie)
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/user/logout',
-            method:'get'
+            method:'get',
+            withCredentials: true
         })
         if(response.data.authentication==='loggedout'){
             console.log(response)
