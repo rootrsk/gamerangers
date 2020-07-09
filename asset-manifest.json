@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/gamerangers/static/css/main.87843395.chunk.css",
-    "main.js": "/gamerangers/static/js/main.a570b1ad.chunk.js",
-    "main.js.map": "/gamerangers/static/js/main.a570b1ad.chunk.js.map",
+    "main.js": "/gamerangers/static/js/main.5434e23b.chunk.js",
+    "main.js.map": "/gamerangers/static/js/main.5434e23b.chunk.js.map",
     "runtime-main.js": "/gamerangers/static/js/runtime-main.6bc4a064.js",
     "runtime-main.js.map": "/gamerangers/static/js/runtime-main.6bc4a064.js.map",
     "static/js/2.85c88fb6.chunk.js": "/gamerangers/static/js/2.85c88fb6.chunk.js",
     "static/js/2.85c88fb6.chunk.js.map": "/gamerangers/static/js/2.85c88fb6.chunk.js.map",
     "index.html": "/gamerangers/index.html",
-    "precache-manifest.ddaa62915a165f5cb62d79ef6904bc5c.js": "/gamerangers/precache-manifest.ddaa62915a165f5cb62d79ef6904bc5c.js",
+    "precache-manifest.c63e2e0483c0d0f762f8a26e05912d49.js": "/gamerangers/precache-manifest.c63e2e0483c0d0f762f8a26e05912d49.js",
     "service-worker.js": "/gamerangers/service-worker.js",
     "static/css/main.87843395.chunk.css.map": "/gamerangers/static/css/main.87843395.chunk.css.map",
     "static/js/2.85c88fb6.chunk.js.LICENSE.txt": "/gamerangers/static/js/2.85c88fb6.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6bc4a064.js",
     "static/js/2.85c88fb6.chunk.js",
     "static/css/main.87843395.chunk.css",
-    "static/js/main.a570b1ad.chunk.js"
+    "static/js/main.5434e23b.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff719c69511e496862904b8201f6af50",
+    "revision": "35c6b5c2721ceb8022c0e7b06536858f",
     "url": "/gamerangers/index.html"
   },
   {
-    "revision": "1f1acc8937bfdadccc87",
+    "revision": "e51fe5b3c19112215106",
     "url": "/gamerangers/static/css/main.87843395.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gamerangers/static/js/2.85c88fb6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1f1acc8937bfdadccc87",
-    "url": "/gamerangers/static/js/main.a570b1ad.chunk.js"
+    "revision": "e51fe5b3c19112215106",
+    "url": "/gamerangers/static/js/main.5434e23b.chunk.js"
   },
   {
     "revision": "e7aa787e2e58998f5c11",
