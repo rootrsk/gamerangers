@@ -28,10 +28,13 @@ class LoginFrom extends React.Component{
         this.setState({button:'clicked'})
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/user/login',
+            // url:'http://localhost:3001/user/login',
             method:'post',
-            data: this.state
-        })
+            data: this.state,
+            withCredentials: true
+        })  
         console.log(response.data)
+        console.log(response)
         if(response.data.authentication==='loggedin'){
             const login_error = response.data.error
             const login_message = response.data.error 

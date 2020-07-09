@@ -18,8 +18,11 @@ class User extends React.Component  {
     componentDidMount = async() =>{
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/user/me',
-            method:'get'
+            method:'get',
+            withCredentials: true
         })
+        console.log('from did mound')
+        console.log(response)
         this.props.dispatch({
             type:'USER',
             user:response.data
@@ -28,8 +31,12 @@ class User extends React.Component  {
     componentDidUpdate =  async() =>{
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/user/me',
-            method:'get'
+            method:'get',
+            withCredentials: true
         })
+        
+        console.log('from did update')
+        console.log(response)
         if(response.data.authentication==='loggedout'){
             this.props.dispatch({
                 type:'USER',

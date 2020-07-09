@@ -18,4 +18,4 @@ const stateToProps = (state) =>{
     }
 }
 
-export default connect()(LoginTracker) 
+export default connect(stateToProps)(LoginTracker) 
