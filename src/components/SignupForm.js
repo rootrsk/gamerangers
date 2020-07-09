@@ -4,14 +4,15 @@ import axios from 'axios'
 import {LoadingComponened10} from './others/LoadingPage'
 
 class SignupFrom extends React.Component{
-    state = {}
+    state = {message:''}
     componentDidMount = () =>{
-        const token = document.cookie.includes('token')
-        if(token){
-            this.setState({
-                message:'successful'
-            })
-        }
+        // const token = document.cookie.includes('token')
+        // console.log(token)
+        // if(token){
+        //     this.setState({
+        //         message:'successful'
+        //     })
+        // }
     }
     onNameChange = (e) =>{
         const name = e.target.value
@@ -35,8 +36,13 @@ class SignupFrom extends React.Component{
         this.setState({password})
     }
     onSubmit = async(e) =>{
-        this.setState({button:'clicked'})
+        
         e.preventDefault()
+        this.setState({
+            error: '',
+            message : '',
+            button:'clicked'
+        })
         const data = {
             name:this.state.name,
             email:this.state.email,
@@ -45,14 +51,17 @@ class SignupFrom extends React.Component{
             password : this.state.password
         }
         const response = await axios({
-            url:'/user/signup',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/user/signup',
             method:'POST',
-            data:data
+            data:data,
+            withCredentials: true
             
         })
+        console.log(response)
         this.setState({
             error:response.data.error,
-            message : response.data.message
+            message : response.data.message,
+            button:''
         })
 
     }
