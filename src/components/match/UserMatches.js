@@ -9,7 +9,7 @@ class UserMatches extends React.Component{
     componentDidMount = async () =>{
         console.log('User')
         const response = await axios({
-            url:'http://localhost:3001/user/matches',
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/user/matches',
             method:'get',
             withCredentials : true
         })

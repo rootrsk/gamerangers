@@ -28,6 +28,7 @@ class LiveMatch extends React.Component{
             <div>
                  <div className='slider'>
                     <div>
+                        
                         {(()=>{
                             if(this.state.live_match) return <RenderLiveMatch match={this.state.live_match} />
                             else if(this.state.next_match) return <RenderNextMatch match={this.state.next_match} />
