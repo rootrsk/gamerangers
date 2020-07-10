@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://rootrsk.github.io/gamerangers/",
-  "proxy" :"https://rootrsk-gamerangers-api.herokuapp.com/",
+  "proxy": "https://rootrsk-gamerangers-api.herokuapp.com/",
   "engines": {
     "npm": "6.12.1",
     "node": "12.13.1"
@@ -20,15 +20,16 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "resolve-url-loader": "^3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
