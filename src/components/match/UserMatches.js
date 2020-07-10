@@ -1,36 +1,43 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 
-class Teams extends React.Component{
-    state={matches : [],teams:[]}
+class UserMatches extends React.Component{
+    state={matches : []}
     componentDidMount = async () =>{
+        console.log('User')
         const response = await axios({
-            url:`https://rootrsk-gamerangers-api.herokuapp.com/admin/match/teams/${this.props.match.params.id}`,
+            url:'http://localhost:3001/user/matches',
             method:'get',
             withCredentials : true
         })
-        this.setState({teams:response.data.teams,match:response.data.match})
+        console.log(response.data.length)
+        console.log(response.data)
+        if(response.data.length>0){
+            this.setState({matches:response.data})
+            console.log(this.state)
+        }
     }
 
     render() {
         return(
-            <div className='box'>
-                {this.state.match?<RenderMatch match={this.state.match} />: <p></p>}
-
-                {this.state.teams.map((team,index)=>{
-                    return <RenderTeam team={team} index={index} key={team._id}/>
-                })}
+            <div>
+                <h2>Your Matches</h2>
+                <div className='slider'>
+                {this.state.matches.length>0?this.state.matches.map((match,index)=>{
+                    return <RenderMatch match={match.match} index={index}key={match._id}team={match.team}/>
+                }):<p>No match found</p>}
             </div>
+            </div>
+            
         )
     }
 }
 
 
 const RenderMatch = (props) =>{
-    console.log(props)
-    if(!props) return
     const status = ()=>{
         switch(props.match.match_status){
             case 1 : 
@@ -62,39 +69,33 @@ const RenderMatch = (props) =>{
     
 
     return(
-        <div className='container'>
-            <div >
-                <h2>Match Details</h2>
+        <div className='slides'>
+            <div>
+                
+                <h2>Match : {props.index+1}</h2>
                 <p>Time : {Date(props.match.time).split('GMT')[0]} </p>
                 <p>Winning Prize : {props.match.winning_prize} &#8377;</p>
                 <p>Entry fee : {props.match.entry_fee} &#8377;</p>
                 <p>Per Kill Prize : {props.match.per_kill_prize} </p>
                 <p>Type : {type()} </p>
                 <p>Status : {status()} </p>
-
+                <p>Team : {props.team.team_name} </p>
+                <Link to={`/user/match/registration/${props.match._id}?${props.match.match_type}`} >Edit</Link>
             </div>
             
         </div>
     )
 }
 
-const RenderTeam = (props) =>{
-    console.log(props)
-    return(
-        <div className='container'>
-            <div >
-                <h2>Team No : {props.index+1} </h2>
-                <h3> {props.team.team_name} </h3>
-                <p>Player 1 : {props.team.player_1} </p>
-                <p>Player 2 : {props.team.player_2} </p>
-                <p>Player 3 : {props.team.player_3} </p>
-                <p>Player 4 : {props.team.player_4} </p>
+// const Register = (props) =>{
+//     console.log(props)
+//     console.log('Going to reg page')
+//     return <div>
+//         <Link to='/'/>
+//     </div>
+// }
+// Register()
 
-            </div>
-            
-        </div>
-    )
-}
+// connect () (Register)
 
-
-export default connect()(Teams)
+export default UserMatches

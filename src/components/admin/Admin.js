@@ -22,7 +22,8 @@ class Admin extends React.Component{
     componentDidMount = async() =>{
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/admin/me',
-            method:'get'
+            method:'get',
+            withCredentials : true
         })
         this.props.dispatch({
             type:'USER',
@@ -33,7 +34,8 @@ class Admin extends React.Component{
     componentDidUpdate =  async() =>{
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/admin/me',
-            method:'get'
+            method:'get',
+            withCredentials : true
         })
         if(response.data.authentication==='loggedout'){
             this.props.dispatch({

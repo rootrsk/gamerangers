@@ -9,7 +9,8 @@ class Profile extends React.Component{
         console.log("hello")
         const response =await axios({
             url :'https://rootrsk-gamerangers-api.herokuapp.com/admin/me',
-            method:'get'
+            method:'get',
+            withCredentials : true
         })
         console.log(response)
         if(true){

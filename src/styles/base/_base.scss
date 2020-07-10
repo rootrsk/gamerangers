@@ -80,3 +80,23 @@ h1{
     color:blue;
     transform: translate(-50%, -50%);
 }
+.time{
+    display: inline;
+}
+
+.next-match{
+    color: black;
+    background-color: white;
+    width: 80%;
+    padding: 20px;
+}
+.live-match{
+    color: black;
+    background-color: white;
+    width: 80%;
+    padding: 20px;
+}
+.live-text{
+    font-size: 30px;
+    text-align: center;
+}

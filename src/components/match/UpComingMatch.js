@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import Timer from '../others/CountDownTimer'
 
 
 class UpComingMatches extends React.Component{
@@ -15,17 +16,20 @@ class UpComingMatches extends React.Component{
         console.log(response)
         if(response.data.length>0){
             this.setState({matches:response.data})
-            console.log(this.state)
         }
     }
 
     render() {
         return(
-            <div className='slider'>
+            <div>
+                <h2>Upcoming Matches</h2>
+                 <div className='slider'>
                 {this.state.matches.length>0?this.state.matches.map((match,index)=>{
                     return <RenderMatch match={match} index={index} key={match._id}/>
                 }):<p>No match found</p>}
             </div>
+            </div>
+           
         )
     }
 }
@@ -60,19 +64,25 @@ const RenderMatch = (props) =>{
                 return 'Update Soon'
         }
     }
-    
+    const time = () =>{
+        const t = new Date(props.match.time).toString()
+        const showDate = t.split('GMT')[0]
+        return  showDate
+    }
+    time()
+
 
     return(
         <div className='slides'>
             <div>
                 <h2>Match : {props.index+1}</h2>
-                <p>Time : {Date(props.match.time).split('GMT')[0]} </p>
+                <p>Time : {time()} </p>
                 <p>Winning Prize : {props.match.winning_prize} &#8377;</p>
                 <p>Entry fee : {props.match.entry_fee} &#8377;</p>
-                <p>Per Kill Prize : {props.match.per_kill_prize} </p>
+                <p>Per Kill Prize : {props.match.per_kill_prize} &#8377;</p>
                 <p>Type : {type()} </p>
                 <p>Status : {status()} </p>
-                <p></p>
+                {<Timer time={props.match.time} />}
                 <Link to={`/user/match/registration/${props.match._id}?${props.match.match_type}`} >Register</Link>
             </div>
             

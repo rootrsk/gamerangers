@@ -17,7 +17,8 @@ const post = async(props) =>{
     const response = await axios({
         url:'https://rootrsk-gamerangers-api.herokuapp.com/match/create',
         method:'post',
-        data:props
+        data:props,
+        withCredentials : true
     })
     return response
 
