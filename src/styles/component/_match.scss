@@ -1,4 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=VT323&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=VT323&display=swap');
 .slider{
   
@@ -25,7 +25,10 @@
   width: 250px;
   height: 300px;
   background: white;
-  background-image: url('https://techfest.org/gamersleague/images/pubg.png');
+  // background-image: url('https://images-na.ssl-images-amazon.com/images/I/71jDObYnERL._SY450_.jpg');
+
+  // background-image: url('https://techfest.org/gamersleague/images/pubg.png');
+  background-image: url('../../images/pubgbanner.png');
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
