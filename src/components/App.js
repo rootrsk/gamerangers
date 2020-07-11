@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import '../styles/style.scss'
+import '../styles/style.css'
 import Help from './Help'
 import Login from './Login'
 import Signup from './Signup'
