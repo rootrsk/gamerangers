@@ -2,8 +2,7 @@
   "name": "gamerangers",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rootrsk.github.io/gamerangers/",
-  "proxy": "https://rootrsk-gamerangers-api.herokuapp.com/",
+  "homepage": "https://gamerangers.live",
   "engines": {
     "npm": "6.12.1",
     "node": "12.13.1"
