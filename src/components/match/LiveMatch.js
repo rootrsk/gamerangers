@@ -11,7 +11,7 @@ class LiveMatch extends React.Component{
     componentDidMount = async () =>{
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/next-match',
-            url:'http://localhost:3001/next-match',
+            // url:'http://localhost:3001/next-match',
             method:'get'
         })
         const response2 = await axios ({
