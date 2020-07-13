@@ -6,13 +6,13 @@ import {LoadingComponened10} from './others/LoadingPage'
 class SignupFrom extends React.Component{
     state = {message:''}
     componentDidMount = () =>{
-        // const token = document.cookie.includes('token')
-        // console.log(token)
-        // if(token){
-        //     this.setState({
-        //         message:'successful'
-        //     })
-        // }
+        const token = document.cookie.includes('token')
+        console.log(token)
+        if(token){
+            this.setState({
+                message:'successful'
+            })
+        }
     }
     onNameChange = (e) =>{
         const name = e.target.value

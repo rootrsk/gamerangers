@@ -8,11 +8,7 @@ class LoginFrom extends React.Component{
 
     state = {}
     componentDidMount = () =>{
-        const token = document.cookie.includes('token')
-        if(token){
-            this.setState({login_message:'successful'})
-            
-        }
+        
     }
     onEmailChange = (e) =>{
         const email = e.target.value
@@ -37,7 +33,7 @@ class LoginFrom extends React.Component{
         console.log(response)
         if(response.data.authentication==='loggedin'){
             const login_error = response.data.error
-            const login_message = response.data.error 
+            const login_message = response.data.message 
             this.setState({login_error,login_message})
             this.props.dispatch({
                 type:'USER',

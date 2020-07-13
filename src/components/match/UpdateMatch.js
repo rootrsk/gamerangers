@@ -158,17 +158,18 @@ class UpdateMatch extends React.Component{
                         onChange={this.onPaymentLinkChange} 
                     />
                     <label>Match Type</label>   
-                    <select onChange={this.onMatchTypeChange} defaultValue={this.state.match_type}>
+                    <select onChange={this.onMatchTypeChange} defaultValue={this.state.match_type} >
+                        {console.log(this.state.match_type)}
                         <option value='1'>Solo</option>
                         <option value='2'>Duo</option>
                         <option value='3'>Squad</option>
                     </select>
                     <label>Match Status</label>
                     <select onChange={this.onMatchStatusChange} defaultValue={this.state.match_status} >
-                        <option value='1'>Registration Open</option>
-                        <option value='2'>Registration Closed</option>
-                        <option value='3'>Live</option>
-                        <option value='4'>Finished</option>
+                        <option value={1}>Registration Open</option>
+                        <option value={2}>Registration Closed</option>
+                        <option value={3}>Live</option>
+                        <option value={4}>Finished</option>
                     </select>
                     <label>Room Id</label>
                     <input 
