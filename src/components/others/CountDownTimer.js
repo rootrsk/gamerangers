@@ -25,7 +25,7 @@ class CountDownTimer extends React.Component{
                         }
                     }, 1000);
                 })()}
-                <div><span className='timer-text'>Starts in:</span>{`${this.state.days}d :${this.state.hours}h:${this.state.minutes}m:${this.state.seconds}s`} </div>
+                <div><span className='timer-text'>Starts in  :</span>{`${this.state.days}d:${this.state.hours}h:${this.state.minutes}m:${this.state.seconds}s`} </div>
             </div>
         )
     }
