@@ -33,7 +33,7 @@ const Signup = () =>{
     return(
         <div>
             <Header />
-            <h1>Singup</h1>
+            <h1>Signup</h1>
             <SignupForm onSubmit={formValidation} responseData={responseData} />
         </div>
     )

@@ -80,12 +80,19 @@ h1{
 .next-match{
 
   width: 80%;
+  height: 250px;
   margin: auto;
   color: black;
   text-align: center;
   background-color: white;
   margin-bottom: 10px;
   border-radius: 5px;
+}
+.register{
+  margin-top: 100px;
+}
+.next-match-time{
+  font-size: 30px;
 }
 .live-match{
     height: 250px;

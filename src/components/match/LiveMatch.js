@@ -9,18 +9,21 @@ import Timer from '../others/CountDownTimer'
 class LiveMatch extends React.Component{
     state={next_match:''}
     componentDidMount = async () =>{
+        console.log('mountedd')
         const response = await axios({
             url:'https://rootrsk-gamerangers-api.herokuapp.com/next-match',
             // url:'http://localhost:3001/next-match',
-            method:'get'
+            method:'get',
+            withCredentials: true
         })
+        console.log(response)
         const response2 = await axios ({
-            url:'https://rootrsk-gamerangers-api.herokuapp.com/live-match'
+            url:'https://rootrsk-gamerangers-api.herokuapp.com/live-match',
             // url:'http://localhost:3001/live-match',
-        })
-        if(response2.data._id){
+            withCredentials: true,
+            method:'get'
 
-        }
+        })
         console.log(response2)
         const response3 = await axios({
             // url:'http://localhost:3001/user/match-details',
@@ -63,10 +66,13 @@ const RenderNextMatch = (props) =>{
             <div className='rotate-vert-center'>
                 <span className='live-text text-pop-up-top'>NEXT MATCH</span>
             </div>
-            <div>
+            <div className='next-match-time'>
                 <Timer time={props.match.time} key={props.match._id}/>
             </div>
-            {props.match.match_status===1?<Link className='show-button' to={`/user/match/registration/${props.match._id}`}>Register</Link>:<p></p>}
+            <div className='register'>
+            {props.match.match_status===1?<Link  to={`/user/match/registration/${props.match._id}`}>Register</Link>:<p></p>}
+            </div>
+            
         </div>
     )
     
