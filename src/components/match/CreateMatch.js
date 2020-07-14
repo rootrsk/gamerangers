@@ -21,7 +21,6 @@ const post = async(props) =>{
         withCredentials : true
     })
     return response
-
 }
 
 

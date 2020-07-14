@@ -4,6 +4,7 @@ import React from 'react'
 import Profile from './DisplayProfile'
 import UpcomingMatches from '../match/UpComingMatch'
 import UserMatches from '../match/UserMatches'
+import LiveMatch from '../match/LiveMatch'
 
 
 const Dashboard = () =>{
@@ -13,6 +14,7 @@ const Dashboard = () =>{
             <Profile />
             <UpcomingMatches />
             <UserMatches  />
+            <LiveMatch />
         </div>
     )
 }

@@ -21,7 +21,6 @@ class CountDownTimer extends React.Component{
                         })
                         if (distance < 0) {
                             clearInterval(x)
-
                         }
                     }, 1000);
                 })()}

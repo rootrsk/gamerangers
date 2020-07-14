@@ -10,7 +10,6 @@ class TeamForm extends React.Component{
         error:''
     }
     
-
     componentDidMount = () =>{
         
     }

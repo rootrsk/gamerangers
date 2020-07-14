@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Timer from '../others/CountDownTimer'
+import MatchNotFound from '../others/MatchNotFound'
 
 
 class UpComingMatches extends React.Component{
@@ -26,7 +27,7 @@ class UpComingMatches extends React.Component{
                  <div className='slider'>
                 {this.state.matches.length>0?this.state.matches.map((match,index)=>{
                     return <RenderMatch match={match} index={index} key={match._id}/>
-                }):<p>No match found</p>}
+                }):<MatchNotFound />}
             </div>
             </div>
            
@@ -89,16 +90,5 @@ const RenderMatch = (props) =>{
         </div>
     )
 }
-
-// const Register = (props) =>{
-//     console.log(props)
-//     console.log('Going to reg page')
-//     return <div>
-//         <Link to='/'/>
-//     </div>
-// }
-// Register()
-
-// connect () (Register)
 
 export default UpComingMatches

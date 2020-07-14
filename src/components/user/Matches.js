@@ -1,13 +1,15 @@
 import React from 'react'
-import UserMatch from './UserMatch'
-// import UpcomingMatches from './UpcomingMatches'
+import UserMatches from '../match/UserMatches'
 import UpcomingMatches from '../match/UpComingMatch'
+import Profile from './DisplayProfile'
+import LiveMatch from '../match/LiveMatch'
 
 const Matches = () =>{
     return(
         <div>
-            <UserMatch />
-            <UpcomingMatches />
+            <Profile />
+            <UserMatches />
+            <LiveMatch />
         </div>
     )
 }

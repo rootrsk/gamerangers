@@ -22,7 +22,6 @@ class UpComingMatches extends React.Component{
     render() {
         return(
             <div className='slider'>
-                {/* <h3>Upcoming Mathches</h3> */}
                 {this.state.matches.map((match,index)=>{
                     return <RenderMatch match={match} index={index} key={match._id}/>
                 })}
@@ -78,7 +77,6 @@ const RenderMatch = (props) =>{
                 <Link to={`/admin/match-update/${props.match._id}`} >Update</Link>
                 <Link to={`/admin/match-delete/${props.match._id}`} >Delete</Link>
             </div>
-            
         </div>
     )
 }

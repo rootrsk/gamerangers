@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import MatchNotFound from '../others/MatchNotFound'
 import { connect } from 'react-redux'
 
 
@@ -14,10 +15,8 @@ class UserMatches extends React.Component{
             withCredentials : true
         })
         console.log(response.data.length)
-        console.log(response.data)
         if(response.data.length>0){
             this.setState({matches:response.data})
-            console.log(this.state)
         }
     }
 
@@ -28,8 +27,8 @@ class UserMatches extends React.Component{
                 <div className='slider'>
                 {this.state.matches.length>0?this.state.matches.map((match,index)=>{
                     return <RenderMatch match={match.match} index={index}key={match._id}team={match.team}/>
-                }):<p>No match found</p>}
-            </div>
+                }):<MatchNotFound />}
+                </div>
             </div>
             
         )
@@ -71,7 +70,6 @@ const RenderMatch = (props) =>{
     return(
         <div className='slides'>
             <div>
-                
                 <h2>Match : {props.index+1}</h2>
                 <p>Time : {Date(props.match.time).split('GMT')[0]} </p>
                 <p>Winning Prize : {props.match.winning_prize} &#8377;</p>
@@ -82,20 +80,10 @@ const RenderMatch = (props) =>{
                 <p>Team : {props.team.team_name} </p>
                 <Link to={`/user/match/registration/${props.match._id}?${props.match.match_type}`} >Edit</Link>
             </div>
-            
         </div>
     )
 }
 
-// const Register = (props) =>{
-//     console.log(props)
-//     console.log('Going to reg page')
-//     return <div>
-//         <Link to='/'/>
-//     </div>
-// }
-// Register()
 
-// connect () (Register)
 
 export default UserMatches

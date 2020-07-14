@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Timer from '../others/CountDownTimer'
+import MatchNotFound from '../others/MatchNotFound'
 
 
 
@@ -49,7 +50,7 @@ class LiveMatch extends React.Component{
                     {(()=>{
                         if(this.state.live_match) return <RenderLiveMatch match={this.state.live_match} match_details={this.state.match_details} error={this.state.error} />
                         else if(this.state.next_match) return <RenderNextMatch match={this.state.next_match}  />
-                        else return <p>No Match Found</p>
+                        else return <MatchNotFound />
                     })()}
                 </div>
             </div>
